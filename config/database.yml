@@ -21,6 +21,10 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+  # do i even need this?
+  # username: jcampbell # role previously added
+  # password: <%= ENV['DATABASE_PASSWORD'] %> # variable previously added
+
 development:
   <<: *default
   database: flickr_api_development
