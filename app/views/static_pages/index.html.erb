@@ -6,9 +6,12 @@
   <%= form.submit "Retrieve Photos" %>
 <% end %>
 
-<% unless @photos.nil? %>
+<% if params[:flickr_id] %>
   <h4><%= params[:flickr_id] %>'s photos:</h4>
-  <% @photos.each do |photo| %>
-    <%= link_to(image_tag(Flickr.url(photo)), Flickr.url_photopage(photo)) %>
-  <% end %>
+<% else %>
+  <h4>Recent Flickr photos:</h4>
+<% end %>
+
+<% @photos.each do |photo| %>
+  <%= link_to(image_tag(Flickr.url(photo)), Flickr.url_photopage(photo)) %>
 <% end %>
