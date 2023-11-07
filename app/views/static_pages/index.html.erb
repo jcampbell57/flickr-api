@@ -1,2 +1,14 @@
 <h1>Flickr Finder</h1>
 
+<%= form_with url: "/", method: :get do |form| %>
+  <%= form.label :flickr_id, "Flickr ID:" %>
+  <%= form.text_field :flickr_id %>
+  <%= form.submit "Retrieve Photos" %>
+<% end %>
+
+<% unless @photos.nil? %>
+  <h4><%= params[:flickr_id] %>'s photos:</h4>
+  <% @photos.each do |photo| %>
+    <%= link_to(image_tag(Flickr.url(photo)), Flickr.url_photopage(photo)) %>
+  <% end %>
+<% end %>
