@@ -1,8 +1,20 @@
-<h1>Flickr Finder</h1>
-    
+<!---
+<%# alternative to alert code below %>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+--->
+
+<%# Alternative to code above %>
+<%= alert %>
+
+<h1><%= link_to('Flickr Finder', root_path) %></h1>
+
 <%= render 'form' %>
 
-<% if params[:flickr_id] %>
+<% if params[:flickr_id] && flash.empty? %>
   <h4><%= params[:flickr_id] %>'s photos:</h4>
 <% else %>
   <h4>Recent Flickr photos:</h4>
