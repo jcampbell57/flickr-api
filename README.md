@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project will help me become familiar with accessing the flickr API through a gem while using the figaro gem to store flickr user_id, API key and secret.
 
-Things you may want to cover:
+Project info:
+* Ruby version 3.2.2
+* Link to project description: https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker
 
-* Ruby version
+This app makes use of:
+* Flickr API
 
-* System dependencies
+Misc terminal setup: 
+* rails g controller StaticPages index
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project could be improved:
+* with styling!
